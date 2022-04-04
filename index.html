@@ -10,10 +10,15 @@
 				left:0px;
 				height:100%;
 				width:100%;
+				overflow: hidden;
+				transition: background 0.25s;
 			}
 		</style>
 		<script>
 			//some code here...
+			function randomNum(s,e){
+				return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+			}
 		</script>
 	</head>
 	<body>
@@ -22,6 +27,9 @@
 		
 		<script>
 			//some code here...
+			document.body.addEventListener("click",()=>{
+				document.body.style.background="rgb("+randomNum(50,240).toString()+","+randomNum(50,240).toString()+","+randomNum(50,240).toString()+")";
+			});
 		</script>
 		
 	</body>
